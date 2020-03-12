@@ -1,0 +1,15 @@
+server:
+  port: 8761  #项目的访问端口
+  servlet:
+    context-path: /
+spring:
+  application:  #当前发布的服务的名字
+    name: eureka-server
+#配置注册中心
+eureka:
+  client:
+    fetch-registry: true  #该服务是否可以从注册中心中拉去服务列表
+    register-with-eureka: true  #该服务不需要将自己注册到注册中心
+    service-url:
+      defaultZone: http://localhost:8761/eureka #配置注册中心的访问地址
+

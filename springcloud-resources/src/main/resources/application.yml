@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/empmanager?serverTimezone=UTC
+    data-username: root
+    data-password: 123456
+  jpa:
+   # 控制台是否打印SQL语句
+    show-sql: true
+     #项目启动时根据实体类产生表（正向工程）
+    generate-ddl: true
+    hibernate:
+    #如果数据不一致 更新数据
+      ddl-auto: update
+      #配置方言，jpa开发的程序可实现跨数据库平台，不同的数据库只需要修改这里即可
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
